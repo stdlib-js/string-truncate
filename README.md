@@ -22,7 +22,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] [![dependencies][dependencies-image]][dependencies-url]
 
-> Truncate a string to a given length
+> Truncate a string to a specified length.
 
 <!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
 
@@ -54,14 +54,14 @@ var truncate = require( '@stdlib/string-truncate' );
 
 #### truncate( str, len[, ending] )
 
-Truncates a string to a given length.
+Truncates a string to a specified length.
 
 ```javascript
 var out = truncate( 'beep boop', 7 );
 // returns 'beep...'
 ```
 
-By default, the truncated string is appended with `'...'`. To customize the truncated string, provide an optional `ending` argument:
+By default, the truncated string is appended with `'...'`. To customize the truncated string, provide an `ending` argument:
 
 ```javascript
 var out = truncate( 'beep boop', 7, '!' );
@@ -144,8 +144,7 @@ Options:
   -h,    --help                Print this message.
   -V,    --version             Print the package version.
          --len length          String length.
-         --ending str          Custom ending (default: '...').
-
+         --ending str          Custom ending. Default: '...'.
 ```
 
 </section>
