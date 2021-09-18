@@ -52,7 +52,7 @@ npm install @stdlib/string-truncate
 var truncate = require( '@stdlib/string-truncate' );
 ```
 
-#### truncate( str, len[, ending] )
+#### truncate( str, len\[, ending] )
 
 Truncates a string to a specified length.
 
@@ -114,7 +114,6 @@ out = truncate( str, 6 );
 </section>
 
 <!-- /.examples -->
-
 
 <!-- Section for describing a command-line interface. -->
 
@@ -193,6 +192,20 @@ Hello!
 
 <!-- /.references -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/string/truncate-middle`][@stdlib/string/truncate-middle]</span><span class="delimiter">: </span><span class="description">truncate a string in the middle to a specified length.</span>
+
+</section>
+
+<!-- /.related -->
+
 <!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
 
@@ -249,6 +262,12 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/string-truncate/main/LICENSE
+
+<!-- <related-links> -->
+
+[@stdlib/string/truncate-middle]: https://github.com/stdlib-js/string-truncate-middle
+
+<!-- </related-links> -->
 
 </section>
 
