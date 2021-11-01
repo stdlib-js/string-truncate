@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "@stdlib/assert-is-nonnegative-integer": "^0.0.x",
+    "@stdlib/assert-is-regexp-string": "^0.0.x",
     "@stdlib/assert-is-string": "^0.0.x",
     "@stdlib/cli-ctor": "^0.0.x",
     "@stdlib/fs-read-file": "^0.0.x",
@@ -49,7 +50,8 @@
     "@stdlib/streams-node-stdin": "^0.0.x",
     "@stdlib/string-next-grapheme-cluster-break": "^0.0.x",
     "@stdlib/string-num-grapheme-clusters": "^0.0.x",
-    "@stdlib/types": "^0.0.x"
+    "@stdlib/types": "^0.0.x",
+    "@stdlib/utils-regexp-from-string": "^0.0.x"
   },
   "devDependencies": {
     "@stdlib/assert-is-browser": "^0.0.x",
