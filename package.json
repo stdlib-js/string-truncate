@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/string-truncate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Truncate a string to a specified length.",
   "license": "Apache-2.0",
   "author": {
