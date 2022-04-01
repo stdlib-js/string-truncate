@@ -48,6 +48,7 @@
     "@stdlib/process-read-stdin": "^0.0.x",
     "@stdlib/regexp-eol": "^0.0.x",
     "@stdlib/streams-node-stdin": "^0.0.x",
+    "@stdlib/string-format": "^0.0.x",
     "@stdlib/string-next-grapheme-cluster-break": "^0.0.x",
     "@stdlib/string-num-grapheme-clusters": "^0.0.x",
     "@stdlib/types": "^0.0.x",
