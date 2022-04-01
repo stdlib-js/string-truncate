@@ -1,0 +1,35 @@
+{
+  "name": "@stdlib/string-truncate",
+  "version": "0.0.0",
+  "description": "Truncate a string to a specified length.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./index.mjs",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/string-truncate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdstring",
+    "utilities",
+    "utility",
+    "utils",
+    "util",
+    "pad",
+    "string",
+    "str",
+    "truncate",
+    "trunc",
+    "shorten",
+    "short"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
