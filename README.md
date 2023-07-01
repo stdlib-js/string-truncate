@@ -34,31 +34,38 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/string-truncate
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
--   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var truncate = require( '@stdlib/string-truncate' );
+truncate = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var truncate = require( 'path/to/vendor/umd/string-truncate/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.truncate;
+})();
+</script>
 ```
 
 #### truncate( str, len\[, ending] )
@@ -100,8 +107,13 @@ out = truncate( 'beep boop', 7, '!!!' );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var truncate = require( '@stdlib/string-truncate' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var str = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
 var out = truncate( str, 14 );
@@ -118,6 +130,11 @@ out = truncate( str, 16, '...' );
 str = '🐺 Wolf Brothers 🐺';
 out = truncate( str, 6 );
 // returns '🐺 W...'
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -126,106 +143,7 @@ out = truncate( str, 6 );
 
 <!-- Section for describing a command-line interface. -->
 
-* * *
 
-<section class="cli">
-
-## CLI
-
-<section class="installation">
-
-## Installation
-
-To use as a general utility, install the CLI package globally
-
-```bash
-npm install -g @stdlib/string-truncate-cli
-```
-
-</section>
-<!-- CLI usage documentation. -->
-
-
-<section class="usage">
-
-### Usage
-
-```text
-Usage: truncate [options] [<string>] --len <length>
-
-Options:
-
-  -h,    --help                Print this message.
-  -V,    --version             Print the package version.
-         --len length          String length.
-         --ending str          Custom ending. Default: '...'.
-         --split sep           Delimiter for stdin data. Default: '/\\r?\\n/'.
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- CLI usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-### Notes
-
--   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
-
-    ```bash
-    # Not escaped...
-    $ echo -n $'Hello, World!\nBeep Boop Baz' | truncate --len 6 --split /\r?\n/
-
-    # Escaped...
-    $ echo -n $'Hello, World!\nBeep Boop Baz' | truncate --len 6 --split /\\r?\\n/
-    ```
-
--   The implementation ignores trailing delimiters.
-
-</section>
-
-</section>
-
-<!-- /.notes -->
-
-<!-- CLI usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```bash
-$ truncate 'Hello, World!' --len 8
-Hello...
-
-$ truncate 'Hello, World!' --len 6 --ending '!'
-Hello!
-```
-
-To use as a [standard stream][standard-streams],
-
-```bash
-$ echo -n 'Hello, World!' | truncate --len 8
-Hello...
-```
-
-By default, when used as a [standard stream][standard-streams], the implementation assumes newline-delimited data. To specify an alternative delimiter, set the `split` option.
-
-```bash
-$ echo -n 'Hello, World!\tBeep Boop' | truncate --split '\t' --len 8
-Hello...
-Beep ...
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.cli -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -328,7 +246,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/string/truncate-middle]: https://github.com/stdlib-js/string-truncate-middle
+[@stdlib/string/truncate-middle]: https://github.com/stdlib-js/string-truncate-middle/tree/umd
 
 <!-- </related-links> -->
 
