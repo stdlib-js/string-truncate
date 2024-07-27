@@ -48,7 +48,7 @@
     "@stdlib/process-read-stdin": "^0.2.2",
     "@stdlib/regexp-eol": "^0.2.2",
     "@stdlib/streams-node-stdin": "^0.2.2",
-    "@stdlib/string-format": "^0.2.2",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.2",
     "@stdlib/string-next-grapheme-cluster-break": "^0.2.2",
     "@stdlib/string-num-grapheme-clusters": "^0.2.1",
     "@stdlib/types": "^0.3.2",
