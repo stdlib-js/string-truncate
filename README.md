@@ -45,25 +45,105 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
 
+```bash
+npm install @stdlib/string-truncate
+```
 
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
+
+<section class="usage">
+
+## Usage
+
+```javascript
+var truncate = require( '@stdlib/string-truncate' );
+```
+
+#### truncate( str, len\[, ending] )
+
+Truncates a string to a specified length.
+
+```javascript
+var out = truncate( 'beep boop', 7 );
+// returns 'beep...'
+```
+
+By default, the truncated string is appended with `'...'`. To customize the truncated string, provide an `ending` argument:
+
+```javascript
+var out = truncate( 'beep boop', 7, '!' );
+// returns 'beep b!'
+
+out = truncate( 'beep boop', 7, '!!!' );
+// returns 'beep!!!'
+```
+
+</section>
+
+<!-- /.usage -->
 
 <!-- Package usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
+<section class="notes">
 
+</section>
+
+<!-- /.notes -->
 
 <!-- Package usage examples. -->
 
+<section class="examples">
 
+## Examples
+
+<!-- eslint no-undef: "error" -->
+
+```javascript
+var truncate = require( '@stdlib/string-truncate' );
+
+var str = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+var out = truncate( str, 14 );
+// returns 'Lorem ipsum...'
+
+str = 'To be or not to be, that is the question';
+out = truncate( str, 19, '!' );
+// returns 'To be or not to be!'
+
+str = 'The quick fox jumps over the lazy dog.';
+out = truncate( str, 16, '...' );
+// returns 'The quick fox...'
+
+str = '🐺 Wolf Brothers 🐺';
+out = truncate( str, 6 );
+// returns '🐺 W...'
+```
+
+</section>
+
+<!-- /.examples -->
 
 <!-- Section for describing a command-line interface. -->
 
-
+* * *
 
 <section class="cli">
 
-
+## CLI
 
 <section class="installation">
 
@@ -81,7 +161,7 @@ npm install -g @stdlib/string-truncate-cli
 
 <section class="usage">
 
-## Usage
+### Usage
 
 ```text
 Usage: truncate [options] [<string>] --len <length>
@@ -103,7 +183,7 @@ Options:
 
 <section class="notes">
 
-## Notes
+### Notes
 
 -   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
 
@@ -127,7 +207,7 @@ Options:
 
 <section class="examples">
 
-## Examples
+### Examples
 
 ```bash
 $ truncate 'Hello, World!' --len 8
@@ -172,10 +252,11 @@ Beep ...
 
 <section class="related">
 
+* * *
+
 ## See Also
 
--   <span class="package-name">[`@stdlib/string-truncate`][@stdlib/string-truncate]</span><span class="delimiter">: </span><span class="description">truncate a string to a specified length.</span>
--   <span class="package-name">[`@stdlib/string-truncate-cli-middle`][@stdlib/string/truncate-middle]</span><span class="delimiter">: </span><span class="description">truncate a string in the middle to a specified length.</span>
+-   <span class="package-name">[`@stdlib/string-truncate-middle`][@stdlib/string/truncate-middle]</span><span class="delimiter">: </span><span class="description">truncate a string in the middle to a specified length.</span>
 
 </section>
 
@@ -194,7 +275,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-### Community
+#### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -217,8 +298,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/string-truncate-cli.svg
-[npm-url]: https://npmjs.org/package/@stdlib/string-truncate-cli
+[npm-image]: http://img.shields.io/npm/v/@stdlib/string-truncate.svg
+[npm-url]: https://npmjs.org/package/@stdlib/string-truncate
 
 [test-image]: https://github.com/stdlib-js/string-truncate/actions/workflows/test.yml/badge.svg?branch=main
 [test-url]: https://github.com/stdlib-js/string-truncate/actions/workflows/test.yml?query=branch:main
