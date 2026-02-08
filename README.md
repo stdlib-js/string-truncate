@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import truncate from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/string-truncate/tags). For example,
+
+```javascript
 import truncate from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate@v0.2.3-esm/index.mjs';
 ```
 
@@ -100,7 +105,7 @@ out = truncate( 'beep boop', 7, '!!!' );
 <body>
 <script type="module">
 
-import truncate from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate@v0.2.3-esm/index.mjs';
+import truncate from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate@esm/index.mjs';
 
 var str = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
 var out = truncate( str, 14 );
