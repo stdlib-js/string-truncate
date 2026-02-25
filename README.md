@@ -113,6 +113,8 @@ out = truncate( 'beep boop', 7, '!!!' );
 
 <!-- eslint no-undef: "error" -->
 
+<!-- eslint-disable @cspell/spellchecker -->
+
 ```javascript
 var truncate = require( '@stdlib/string-truncate' );
 
@@ -196,8 +198,6 @@ Options:
     ```
 
 -   The implementation ignores trailing delimiters.
-
-</section>
 
 </section>
 
@@ -301,8 +301,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/string-truncate.svg
 [npm-url]: https://npmjs.org/package/@stdlib/string-truncate
 
-[test-image]: https://github.com/stdlib-js/string-truncate/actions/workflows/test.yml/badge.svg?branch=v0.2.3
-[test-url]: https://github.com/stdlib-js/string-truncate/actions/workflows/test.yml?query=branch:v0.2.3
+[test-image]: https://github.com/stdlib-js/string-truncate/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/string-truncate/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/string-truncate/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/string-truncate?branch=main
