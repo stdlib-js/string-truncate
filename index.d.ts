@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2021 The Stdlib Authors.
@@ -16,18 +16,29 @@
 * limitations under the License.
 */
 
-var proc = require( 'process' );
-var resolve = require( 'path' ).resolve;
-var proxyquire = require( 'proxyquire' );
+// TypeScript Version: 4.1
 
-var fpath = resolve( __dirname, '..', 'bin', 'cli' );
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-proc.stdin.isTTY = false;
+/**
+* Truncates a string to a specified length.
+*
+* @param str - input string
+* @param len - output string length (including ending)
+* @param ending - custom ending (default: `...`)
+* @returns truncated string
+*
+* @example
+* var out = truncate( 'beep boop', 7 );
+* // returns 'beep...'
+*
+* @example
+* var out = truncate( 'beep boop', 7, '|' );
+* // returns 'beep b|'
+*/
+declare function truncate( str: string, len: number, ending?: string ): string;
 
-proxyquire( fpath, {
-	'@stdlib/process-read-stdin': stdin
-});
 
-function stdin( clbk ) {
-	clbk( new Error( 'beep' ) );
-}
+// EXPORTS //
+
+export = truncate;
