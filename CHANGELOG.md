@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-03-23)
+## Unreleased (2026-04-19)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`aa8d436`](https://github.com/stdlib-js/stdlib/commit/aa8d436e7f5bcab413e101bc9954e9e15d162d5d) - **bench:** refactor to use string interpolation in `@stdlib/string` [(#11456)](https:-/github.com/stdlib-js/stdlib/pull/11456) _(by Uday Kakade, Karan Anand)_
 -   [`6154a32`](https://github.com/stdlib-js/stdlib/commit/6154a32beaac09d20e3f76af7daabf41bfa22c32) - **docs:** fix section tags and disable spellcheck for false positives in README files _(by Philipp Burckhardt)_
 
 </details>
@@ -24,9 +25,11 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
+-   Karan Anand
 -   Philipp Burckhardt
+-   Uday Kakade
 
 </section>
 
